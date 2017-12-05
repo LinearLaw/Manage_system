@@ -1,6 +1,14 @@
 <template>
   <div id="app">
-    <router-view/>
+    <header>
+      <Headers></Headers>
+    </header>
+    <section class="container">
+      <Tabs></Tabs>
+    </section>
+    <div class="view_place">
+      <router-view/>
+    </div>
   </div>
 </template>
 a
@@ -12,9 +20,6 @@ export default {
   name: 'app',
   components:{
     Headers,Tabs
-  },
-  mounted(){
-    
   }
 }
 </script>
