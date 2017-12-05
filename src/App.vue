@@ -20,6 +20,9 @@ export default {
   name: 'app',
   components:{
     Headers,Tabs
+  },
+  mounted(){
+    
   }
 }
 </script>
