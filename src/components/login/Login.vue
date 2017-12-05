@@ -1,17 +1,17 @@
 <template>
   <div class="login">
     <div class="input_position clearfix">
-      <el-col :span="4">
+      <el-col :span="8">
         <el-input v-model="account" placeholder="Enter something..."></el-input>
       </el-col>
     </div>
     <div class="input_position clearfix">
-      <el-col :span="4">
+      <el-col :span="8">
         <el-input v-model="password" placeholder="Enter something..."></el-input>
       </el-col>
     </div>
     <div class="input_position clearfix">
-      <el-col :span="4">
+      <el-col :span="8">
         <el-button type="success" long @click="login">SUBMIT</el-button>
       </el-col>
     </div>
@@ -40,5 +40,6 @@ export default {
 }
 </script>
 <style scroped>
-.input_position{padding:20px;}
+.input_position{text-align:center;}
+.el-col{margin-bottom:15px;}
 </style>
