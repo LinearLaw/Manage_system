@@ -2,44 +2,62 @@
   <div class="login">
     <div class="input_position clearfix">
       <el-col :span="8">
-        <el-input v-model="account" placeholder="Enter something..."></el-input>
+        <el-input v-model="loginInfo.account" placeholder="Enter something..."></el-input>
       </el-col>
     </div>
     <div class="input_position clearfix">
       <el-col :span="8">
-        <el-input v-model="password" placeholder="Enter something..."></el-input>
+        <el-input v-model="loginInfo.password" placeholder="Enter something..."></el-input>
       </el-col>
     </div>
     <div class="input_position clearfix">
       <el-col :span="8">
-        <el-button type="success" long @click="login">SUBMIT</el-button>
+        <el-button type="success" long @click="login">{{ $t("login.login_btn") }}</el-button>
       </el-col>
     </div>
-   
-    
   </div>
+  <Signup v-if="switchSignup"></Signup>
 </template>
 
 <script>
+/**
+ * @desc  登录页 & 注册页
+ */
+import Signup from "./SignUp.vue"
 export default {
   name: 'login',
   components:{
-
+    Signup
   },
   data(){
     return{
-      account:"",
-      password:""
+      loginInfo:{
+        account:"",
+        password:""
+      },
+      showPop:{
+        switchSignup:false  //signup pop
+      },
+      verifySuccess:true,   //The content entered is legal
     }
   },
   methods:{
     login(){
-      
+      if(!this.loginInfo.account){
+        this.verifySuccess = false;
+      }
+      if(!this.loginInfo.password){
+        this.verifySuccess = false;
+      }
+      if(this.verifySuccess == false){
+        return;
+      }
     }
   }
 }
 </script>
 <style scroped>
-.input_position{text-align:center;}
+.login{position:relative;}
+.input_position{text-align:center;position:absolute;left:50%;transform:translateX(-50%);}
 .el-col{margin-bottom:15px;}
 </style>

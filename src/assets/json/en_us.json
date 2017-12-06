@@ -1,0 +1,9 @@
+{
+    "login":{
+        "login_btn":"Login",
+        "signup_btn":"Sign up",
+        "accountplaceholder":"Account",
+        "pwdplaceholder":"Password",
+        "repwdplaceholder":"Confirm Password"
+    }
+}

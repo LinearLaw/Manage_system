@@ -11,8 +11,10 @@
     </div>
   </div>
 </template>
-a
 <script>
+/**
+ * @desc  主页
+ */
 import Headers from "@/components/common/Header.vue"
 import Tabs from "@/components/common/Tabs.vue"
 
