@@ -7,16 +7,16 @@ import Vuex from 'vuex'
 import ElementUI from 'element-ui'
 import VueI18n from 'vue-i18n'
 
-import "@/assets/css/common.css"
-import 'element-ui/lib/theme-chalk/index.css'
+import "./assets/css/common.css"
+import 'element-ui/lib/theme-default/index.css'
 
 Vue.use(ElementUI);
 Vue.use(Vuex);
 
 /* i18n */
 Vue.use(VueI18n);
-import EN from '@/assets/json/i18n/en-us.json'
-import CN from '@/assets/json/i18n/zh-cn.json'
+import EN from './assets/json/en-us.json'
+import CN from './assets/json/zh-cn.json'
 const i18n = new VueI18n({locale: 'EN',messages: {CN: CN,EN: EN}})
 
 Vue.config.productionTip = false

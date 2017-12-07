@@ -67,6 +67,6 @@ export default {
 </script>
 <style scroped>
 .sign{position:relative;}
-.input_position{text-align:center;position:absolute;left:50%;transform:translateX(-50%);}
+/*.input_position{text-align:center;position:absolute;left:50%;transform:translateX(-50%);}*/
 .el-col{margin-bottom:15px;}
 </style>
