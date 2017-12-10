@@ -15,8 +15,8 @@
         <el-button type="success" long @click="login">{{ $t("login.login_btn") }}</el-button>
       </el-col>
     </div>
-    <span @click="showPop.switchSignup=true;">Show Signup pop</span>
-    <Signup v-if="showPop.switchSignup"></Signup>
+    <span class="show_signup" @click="showPop.switchSignup=true;">Show Signup pop</span>
+    <Signup v-if="showPop.switchSignup" @closeSignup="closeSignup"></Signup>
   </div>
 
 </template>
@@ -44,6 +44,9 @@ export default {
     }
   },
   methods:{
+    closeSignup(){
+      this.showPop.switchSignup = false;
+    },
     login(){
       if(!this.loginInfo.account){
         this.verifySuccess = false;
@@ -59,7 +62,15 @@ export default {
 }
 </script>
 <style scroped>
-.login{position:relative;text-align:center;}
-/*.input_position{text-align:center;position:absolute;top:50%;left:50%;transform:translateX(-50%);}*/
+.login{
+  position:relative;
+  text-align:center;
+  width:100%;
+  height:100%;
+}
+.show_signup{cursor:pointer;color:#333;}
+.show_signup:hover{
+  border-bottom:1px solid #333;
+}
 .el-col{margin-bottom:15px;display:inline-block;}
 </style>

@@ -1,25 +1,23 @@
 <template>
   <div class="sign">
-    <div class="input_position clearfix">
-      <el-col :span="8">
+    <el-col :span="8"></el-col>
+    <el-col :span="8" class="signup_main"> 
+      <div class="tab_title">{{ $t("login.signup_btn") }}</div>
+      <div class="input_position clearfix">
         <el-input v-model="signupInfo.account" :placeholder="$t('login.accountplaceholder')"></el-input>
-      </el-col>
-    </div>
-    <div class="input_position clearfix">
-      <el-col :span="8">
+      </div>
+      <div class="input_position clearfix">
         <el-input v-model="signupInfo.password" placeholder="Enter something..."></el-input>
-      </el-col>
-    </div>
-    <div class="input_position clearfix">
-      <el-col :span="8">
+      </div>
+      <div class="input_position clearfix">
         <el-input v-model="signupInfo.repassword" placeholder="Enter something..."></el-input>
-      </el-col>
-    </div>
-    <div class="input_position clearfix">
-      <el-col :span="8">
+      </div>
+      <div class="input_position clearfix">
         <el-button type="success" long @click="signup">{{ $t("login.signup_btn") }}</el-button>
-      </el-col>
-    </div>
+        <el-button type="success" long @click="closeSignup">{{ $t("login.comeback") }}</el-button>
+      </div>
+    </el-col>
+    <el-col :span="8"></el-col>    
   </div>
 
 </template>
@@ -44,6 +42,9 @@ export default {
     }
   },
   methods:{
+    closeSignup(){
+      this.$emit("closeSignup");
+    },
     signup(){
       if(!this.signupInfo.account){
         this.verifySuccess = false;
@@ -66,7 +67,31 @@ export default {
 }
 </script>
 <style scroped>
-.sign{position:relative;}
-/*.input_position{text-align:center;position:absolute;left:50%;transform:translateX(-50%);}*/
+.sign{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.4);
+}
+.signup_main{
+  text-align:center;
+  margin-top:10%;
+  background:#fff;
+}
+.tab_title{
+  padding:10px;
+  border-bottom:1px solid #e2e2e1;
+}
+.input_position{
+  text-align:center;
+  padding:10px;
+  width:100%;
+  max-height:200px;
+}
+.input_position:last-child{
+  margin-bottom:0px;
+}
 .el-col{margin-bottom:15px;}
 </style>

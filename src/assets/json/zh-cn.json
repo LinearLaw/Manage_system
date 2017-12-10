@@ -2,6 +2,7 @@
   "login":{
     "login_btn":"登录",
     "signup_btn":"注册",
+    "comeback":"返回",
     "accountplaceholder":"输入账号",
     "pwdplaceholder":"请输入密码",
     "repwdplaceholder":"再次输入密码"
