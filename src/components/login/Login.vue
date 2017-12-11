@@ -1,26 +1,23 @@
 <template>
   <div class="login">
-    <div class="input_position clearfix">
-      <el-col :span="8">
-        <el-input v-model="loginInfo.account" placeholder="Enter something..."></el-input>
-      </el-col>
-    </div>
-    <div class="input_position clearfix">
-      <el-col :span="8">
-        <el-input v-model="loginInfo.password" placeholder="Enter something..."></el-input>
-      </el-col>
-    </div>
-    <div class="input_position clearfix">
-      <el-col :span="8">
-        <el-button type="success" long @click="login">{{ $t("login.login_btn") }}</el-button>
-      </el-col>
-    </div>
-    <span class="show_signup" @click="showPop.switchSignup=true;">Show Signup pop</span>
+    <el-col :span="4"></el-col>
+    <el-col :span="16">
+      <h1 class="input_position txl">{{ $t("login.login_btn") }}</h1>
+      <div class="input_position clearfix">
+          <el-input v-model="loginInfo.account" placeholder="Enter something..."></el-input>
+      </div>
+      <div class="input_position clearfix">
+          <el-input v-model="loginInfo.password" placeholder="Enter something..."></el-input>
+      </div>
+      <div class="input_position txl">
+          <el-button class="login_btn" type="success" long @click="login">{{ $t("login.login_btn") }}</el-button></br>
+          <span class="show_signup" @click="showPop.switchSignup=true;">Show Signup pop</span>
+      </div>
+    </el-col>
+    <el-col :span="4"></el-col>    
     <Signup v-if="showPop.switchSignup" @closeSignup="closeSignup"></Signup>
   </div>
-
 </template>
-
 <script>
 /**
  * @desc  登录页 & 注册页
@@ -67,10 +64,16 @@ export default {
   text-align:center;
   width:100%;
   height:100%;
+  padding:50px;
 }
-.show_signup{cursor:pointer;color:#333;}
+.show_signup{cursor:pointer;color:#777;margin-left:10px;}
 .show_signup:hover{
-  border-bottom:1px solid #333;
+  border-bottom:1px solid #777;
 }
-.el-col{margin-bottom:15px;display:inline-block;}
+.input_position{
+  margin-bottom:10px;
+}
+.input_position:last-child{
+  margin:0;
+}
 </style>
