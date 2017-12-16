@@ -3,7 +3,6 @@
     <router-view/>
   </div>
 </template>
-a
 <script>
 /**
  * @desc  路由入口
@@ -17,7 +16,10 @@ export default {
     Headers,Tabs
   },
   mounted(){
-
+    console.log(this.GLOBAL);
+    if(!this.GLOBAL.cookie.get("members_id")){
+      this.$router.push({"name":"Login"});
+    }
   }
 }
 </script>

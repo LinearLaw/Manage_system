@@ -10,11 +10,11 @@
           <el-input v-model="loginInfo.password" placeholder="Enter something..."></el-input>
       </div>
       <div class="input_position txl">
-          <el-button class="login_btn" type="success" long @click="login">{{ $t("login.login_btn") }}</el-button></br>
+          <el-button class="login_btn" type="success" long @click="login">{{ $t("login.login_btn") }}</el-button>
           <span class="show_signup" @click="showPop.switchSignup=true;">Show Signup pop</span>
       </div>
     </el-col>
-    <el-col :span="4"></el-col>    
+    <el-col :span="4"></el-col>
     <Signup v-if="showPop.switchSignup" @closeSignup="closeSignup"></Signup>
   </div>
 </template>

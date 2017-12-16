@@ -8,7 +8,9 @@ import ElementUI from 'element-ui'
 import VueI18n from 'vue-i18n'
 
 import "./assets/css/common.css"
-import 'element-ui/lib/theme-chalk/index.css'
+import 'element-ui/lib/theme-default/index.css'
+//Load config file
+import _global from './assets/json/utils.vue'
 
 Vue.use(ElementUI);
 Vue.use(Vuex);
@@ -20,6 +22,7 @@ import CN from './assets/json/zh-cn.json'
 const i18n = new VueI18n({locale: 'CN',messages: {CN: CN,EN: EN}})
 
 Vue.config.productionTip = false
+Vue.prototype.GLOBAL = _global
 
 /* eslint-disable no-new */
 new Vue({
