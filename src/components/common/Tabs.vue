@@ -9,7 +9,7 @@
         @close="handleClose"
         background-color="#c7c7c7"
         text-color="#fff"
-        active-text-color="#ffd04b">
+        active-text-color="#ffd04b" router="true">
 
         <!-- 1、main info of shop -->
         <el-submenu index="1">
@@ -18,35 +18,33 @@
             <span>{{ $t('tabs.shopmain')}}</span>
           </template>
           <el-menu-item-group>
-            <el-menu-item index="1-1" route="{'name':'ShopInfo'}">{{ $t('tabs.shopmain_info') }}</el-menu-item>
+            <el-menu-item index="1-1" :route="{'name':'ShopInfo'}">{{ $t('tabs.shopmain_info') }}</el-menu-item>
           </el-menu-item-group>
         </el-submenu>
 
         <!-- 2、product info of shop -->
-        <el-menu-item index="2">
+        <el-submenu index="2">
           <template slot="title">
-            <i class="el-icon-menu"></i>
+            <i class="el-icon-location"></i>
             <span>{{$t('tabs.productmain')}}</span>
           </template>
-
           <el-menu-item-group>
-            <el-menu-item index="2-1" route="{'name':'ProdList'}">{{ $t('tabs.productmain_list')}}</el-menu-item>
-            <el-menu-item index="2-2" route="{'name':'ProdPub'}">{{ $t('tabs.productmain_publish')}}</el-menu-item>
+            <el-menu-item index="2-1" :route="{'name':'ProdList'}">{{ $t('tabs.productmain_list')}}</el-menu-item>
+            <el-menu-item index="2-2" :route="{'name':'ProdPub'}">{{ $t('tabs.productmain_publish')}}</el-menu-item>
           </el-menu-item-group>
-        </el-menu-item>
+        </el-submenu>
 
         <!-- 3、aftermarket info of shop -->
-        <el-menu-item index="3">
+        <el-submenu index="3">
           <template slot="title">
-            <i class="el-icon-setting"></i>
+            <i class="el-icon-location"></i>
             <span>{{$t('tabs.aftermarket')}}</span>
           </template>
-
           <el-menu-item-group>
-            <el-menu-item index="3-1" route="{'name':'AfterProcess'}">{{ $t('tabs.aftermarket_process')}}</el-menu-item>
-            <el-menu-item index="3-2" route="{'name':'AfterLocation'}">{{ $t('tabs.aftermarket_location')}}</el-menu-item>
+            <el-menu-item index="3-1" :route="{'name':'AfterProcess'}">{{ $t('tabs.aftermarket_process')}}</el-menu-item>
+            <el-menu-item index="3-2" :route="{'name':'AfterLocation'}">{{ $t('tabs.aftermarket_location')}}</el-menu-item>
           </el-menu-item-group>
-        </el-menu-item>
+        </el-submenu>
       </el-menu>
     </div>
   </div>
@@ -61,10 +59,10 @@ export default {
   },
   methods: {
     handleOpen(key, keyPath) {
-      console.log(key, keyPath);
+
     },
     handleClose(key, keyPath) {
-      console.log(key, keyPath);
+
     }
   }
 }
