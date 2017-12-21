@@ -18,37 +18,33 @@
             <span>{{ $t('tabs.shopmain')}}</span>
           </template>
           <el-menu-item-group>
-            <el-menu-item index="1-1">
-              <router-link :to="{'name':'ShopInfo'}">{{ $t('tabs.shopmain_info') }}</router-link>
-            </el-menu-item>
+            <el-menu-item index="1-1" route="{'name':'ShopInfo'}">{{ $t('tabs.shopmain_info') }}</el-menu-item>
           </el-menu-item-group>
         </el-submenu>
 
         <!-- 2、product info of shop -->
         <el-menu-item index="2">
-          <i class="el-icon-menu"></i>
-          <span slot="title">{{ $t('tabs.productmain')}}</span>
+          <template slot="title">
+            <i class="el-icon-menu"></i>
+            <span>{{$t('tabs.productmain')}}</span>
+          </template>
+
           <el-menu-item-group>
-            <el-menu-item index="2-1">
-              <router-link :to="{'name':'ProdList'}">{{ $t('tabs.productmain_list')}}</router-link>
-            </el-menu-item>
-            <el-menu-item index="2-2">
-              <router-link :to="{'name':'ProdPub'}">{{ $t('tabs.productmain_publish')}}</router-link>
-            </el-menu-item>
+            <el-menu-item index="2-1" route="{'name':'ProdList'}">{{ $t('tabs.productmain_list')}}</el-menu-item>
+            <el-menu-item index="2-2" route="{'name':'ProdPub'}">{{ $t('tabs.productmain_publish')}}</el-menu-item>
           </el-menu-item-group>
         </el-menu-item>
 
         <!-- 3、aftermarket info of shop -->
         <el-menu-item index="3">
-          <i class="el-icon-setting"></i>
-          <span slot="title">{{ $t('tabs.aftermarket')}}</span>
+          <template slot="title">
+            <i class="el-icon-setting"></i>
+            <span>{{$t('tabs.aftermarket')}}</span>
+          </template>
+
           <el-menu-item-group>
-            <el-menu-item index="3-1">
-              <router-link :to="{'name':'AfterProcess'}">{{ $t('tabs.aftermarket_process')}}</router-link>
-            </el-menu-item>
-            <el-menu-item index="3-2">
-              <router-link :to="{'name':'AfterLocation'}">{{ $t('tabs.aftermarket_location')}}</router-link>
-            </el-menu-item>
+            <el-menu-item index="3-1" route="{'name':'AfterProcess'}">{{ $t('tabs.aftermarket_process')}}</el-menu-item>
+            <el-menu-item index="3-2" route="{'name':'AfterLocation'}">{{ $t('tabs.aftermarket_location')}}</el-menu-item>
           </el-menu-item-group>
         </el-menu-item>
       </el-menu>
