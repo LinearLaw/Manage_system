@@ -1,6 +1,9 @@
 <template>
   <div>
-    <h1>AfterLocation</h1>
+    <el-breadcrumb separator-class="el-icon-arrow-right">
+      <el-breadcrumb-item :to="{ name: 'Index' }">{{ $t('tabs.index')}}</el-breadcrumb-item>
+      <el-breadcrumb-item>{{ $t('tabs.aftermarket_location')}}</el-breadcrumb-item>
+    </el-breadcrumb>
   </div>
 </template>
 

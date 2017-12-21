@@ -1,6 +1,11 @@
 <template>
   <div>
-    <h1>Product List</h1>
+    <el-breadcrumb separator-class="el-icon-arrow-right">
+      <el-breadcrumb-item :to="{ name: 'Index' }">{{ $t('tabs.index')}}</el-breadcrumb-item>
+      <el-breadcrumb-item>{{ $t('tabs.productmain_list')}}</el-breadcrumb-item>
+    </el-breadcrumb>
+
+
   </div>
 </template>
 
