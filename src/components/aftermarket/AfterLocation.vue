@@ -1,12 +1,12 @@
 <template>
-  <div class="indexpage">
-      <h1>Welcome</h1>
+  <div>
+    <h1>AfterLocation</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'headers',
+  name: 'AfterLocation',
   data () {
     return {
 
