@@ -9,12 +9,12 @@
         @close="handleClose"
         background-color="#c7c7c7"
         text-color="#fff"
-        active-text-color="#ffd04b" router="true">
+        active-text-color="#ffd04b" :router="true">
 
         <!-- 1、main info of shop -->
         <el-submenu index="1">
           <template slot="title">
-            <i class="el-icon-location"></i>
+            <!-- <i class="el-icon-location"></i> -->
             <span>{{ $t('tabs.shopmain')}}</span>
           </template>
           <el-menu-item-group>
@@ -25,7 +25,7 @@
         <!-- 2、product info of shop -->
         <el-submenu index="2">
           <template slot="title">
-            <i class="el-icon-location"></i>
+            <!-- <i class="el-icon-location"></i> -->
             <span>{{$t('tabs.productmain')}}</span>
           </template>
           <el-menu-item-group>
@@ -37,7 +37,7 @@
         <!-- 3、aftermarket info of shop -->
         <el-submenu index="3">
           <template slot="title">
-            <i class="el-icon-location"></i>
+            <!-- <i class="el-icon-location"></i> -->
             <span>{{$t('tabs.aftermarket')}}</span>
           </template>
           <el-menu-item-group>
