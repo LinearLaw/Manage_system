@@ -19,6 +19,7 @@
           </template>
           <el-menu-item-group>
             <el-menu-item index="1-1" :route="{'name':'ShopInfo'}">{{ $t('tabs.shopmain_info') }}</el-menu-item>
+            <el-menu-item index="1-2" :route="{'name':'ShopRecord'}">{{ $t('tabs.shopmain_record') }}</el-menu-item>
           </el-menu-item-group>
         </el-submenu>
 
@@ -30,6 +31,7 @@
           </template>
           <el-menu-item-group>
             <el-menu-item index="2-1" :route="{'name':'ProdList'}">{{ $t('tabs.productmain_list')}}</el-menu-item>
+            <el-menu-item index="2-1" :route="{'name':'ProdView'}">{{ $t('tabs.productmain_view')}}</el-menu-item>
             <el-menu-item index="2-2" :route="{'name':'ProdPub'}">{{ $t('tabs.productmain_publish')}}</el-menu-item>
           </el-menu-item-group>
         </el-submenu>
