@@ -1,7 +1,7 @@
 <template>
   <div class="login">
-    <el-col :span="4"></el-col>
-    <el-col :span="16">
+    <el-col :span="7"></el-col>
+    <el-col :span="10" class="login_main">
       <h1 class="input_position txl">{{ $t("login.login_btn") }}</h1>
       <div class="input_position clearfix">
           <el-input v-model="loginInfo.account" placeholder="Enter something..."></el-input>
@@ -14,8 +14,13 @@
           <span class="show_signup" @click="showPop.switchSignup=true;">Show Signup pop</span>
       </div>
     </el-col>
-    <el-col :span="4"></el-col>
-    <Signup v-if="showPop.switchSignup" @closeSignup="closeSignup"></Signup>
+    <el-col :span="7"></el-col>
+    <el-dialog :span="8"
+      :visible.sync="showPop.switchSignup"
+      :before-close="handleClose">
+      <Signup v-if="showPop.switchSignup" @closeSignup="closeSignup"></Signup>
+    </el-dialog>
+    
   </div>
 </template>
 <script>
@@ -66,6 +71,7 @@ export default {
   height:100%;
   padding:50px;
 }
+.login_main{border:1px solid #e2e2e1;border-radius:15px;padding:15px;}
 .show_signup{cursor:pointer;color:#777;margin-left:10px;}
 .show_signup:hover{
   border-bottom:1px solid #777;

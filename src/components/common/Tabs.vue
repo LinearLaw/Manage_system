@@ -8,8 +8,8 @@
         @open="handleOpen"
         @close="handleClose"
         background-color="#c7c7c7"
-        text-color="#fff"
-        active-text-color="#ffd04b" :router="true">
+        text-color="#555961"
+        active-text-color="#327ecc" :router="true">
 
         <!-- 1、main info of shop -->
         <el-submenu index="1">

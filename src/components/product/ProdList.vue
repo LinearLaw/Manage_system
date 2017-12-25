@@ -64,5 +64,5 @@ export default {
 }
 </script>
 <style scoped>
-
+.product_list_main{margin-top:20px}
 </style>

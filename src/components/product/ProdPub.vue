@@ -67,9 +67,10 @@ export default {
         type: [],
         resource: '',
         desc: ''
+      }
     }
   },
-  methods: {
+  methods:{
     onSubmit() {
       console.log('submit!');
     }

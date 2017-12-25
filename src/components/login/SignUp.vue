@@ -1,7 +1,6 @@
 <template>
   <div class="sign">
-    <el-col :span="8"></el-col>
-    <el-col :span="8" class="signup_main"> 
+    <el-col class="signup_main"> 
       <div class="tab_title">{{ $t("login.signup_btn") }}</div>
       <div class="input_position clearfix">
         <el-input v-model="signupInfo.account" :placeholder="$t('login.accountplaceholder')"></el-input>
@@ -14,10 +13,9 @@
       </div>
       <div class="input_position clearfix">
         <el-button type="success" long @click="signup">{{ $t("login.signup_btn") }}</el-button>
-        <el-button type="success" long @click="closeSignup">{{ $t("login.comeback") }}</el-button>
+        <el-button long @click="closeSignup">{{ $t("login.comeback") }}</el-button>
       </div>
-    </el-col>
-    <el-col :span="8"></el-col>    
+    </el-col>  
   </div>
 
 </template>
@@ -77,7 +75,6 @@ export default {
 }
 .signup_main{
   text-align:center;
-  margin-top:10%;
   background:#fff;
 }
 .tab_title{

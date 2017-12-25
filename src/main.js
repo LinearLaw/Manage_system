@@ -8,7 +8,7 @@ import ElementUI from 'element-ui'
 import VueI18n from 'vue-i18n'
 
 import "./assets/css/common.css"
-import 'element-ui/lib/theme-default/index.css'
+import 'element-ui/lib/theme-chalk/index.css'
 //Load config file
 import _global from './assets/json/config/utils.vue'
 
