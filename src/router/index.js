@@ -6,6 +6,7 @@ import Index from '@/components/common/Index.vue'
 
 import Login from '@/components/login/Login.vue'
 import ShopInfo from '@/components/shop/ShopInfo.vue'
+import ShopEdit from '@/components/shop/ShopEdit.vue'
 import ShopRecord from '@/components/shop/ShopRecord.vue'
 import ProdList from '@/components/product/ProdList.vue'
 import ProdView from '@/components/product/ProdView.vue'
@@ -25,6 +26,7 @@ export default new Router({
         //1、Default router
         {   path:'',  name:'Index',  component:Index  },
         {   path:'shopmain_info',  name:'ShopInfo',  component:ShopInfo  },
+        {   path:'shopmain_edit',  name:'ShopEdit',  component:ShopEdit  },
         {   path:'shopmain_record',  name:'ShopRecord',  component:ShopRecord  },
         {   path:'prod_list',  name:'ProdList',  component:ProdList  },
         {   path:'prod_view',  name:'ProdView',  component:ProdView  },
