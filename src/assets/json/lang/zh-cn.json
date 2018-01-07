@@ -20,5 +20,14 @@
     "aftermarket":"售后概况",
     "aftermarket_process":"退款管理",
     "aftermarket_location":"售后地址"
+  },
+  "tools":{
+    "tools_prod":"商品信息",
+    "tools_jiaoyi":"交易信息",
+    "tools_modelpc":"pc端模板",
+    "tools_modelapp":"app模板",
+    "tools_system":"系统",
+    "tools_tongji":"统计",
+    "tools_caiwu":"财务"
   }
 }
