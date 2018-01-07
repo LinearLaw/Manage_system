@@ -28,7 +28,7 @@ export default {
 </script>
 <style scroped>
 header{width:100%;height:100px;position:fixed;left:0;top:0;z-index:3;}
-section{width:260px;height:100%;position:fixed;left:0;top:0;display:inline-block;z-index:3;}
+section{width:150px;height:100%;position:fixed;left:0;top:0;display:inline-block;z-index:3;}
 .view_place{
   width:100%;height:100%;
   position:fixed;left:0;top:0;
