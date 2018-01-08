@@ -23,11 +23,11 @@
   },
   "tools":{
     "tools_prod":"商品信息",
-    "tools_jiaoyi":"交易信息",
+    "tools_transaction":"交易信息",
     "tools_modelpc":"pc端模板",
     "tools_modelapp":"app模板",
     "tools_system":"系统",
-    "tools_tongji":"统计",
-    "tools_caiwu":"财务"
+    "tools_statistics":"统计",
+    "tools_finance":"财务"
   }
 }

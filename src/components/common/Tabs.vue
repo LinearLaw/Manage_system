@@ -47,6 +47,57 @@
             <el-menu-item index="3-2" :route="{'name':'AfterLocation'}">{{ $t('tabs.aftermarket_location')}}</el-menu-item>
           </el-menu-item-group>
         </el-submenu>
+
+        <!-- 4、平台商品列表，支持增删 -->
+        <el-submenu index="4">
+          <template slot="title">
+            <span>{{$t('tools.tools_prod')}}</span>
+          </template>
+        </el-submenu>
+
+        <!-- 5、平台交易信息流水记录：收入、支出 -->
+        <el-submenu index="5">
+          <template slot="title">
+            <span>{{$t('tools.tools_transaction')}}</span>
+          </template>
+        </el-submenu>
+
+        <!-- 6、web页面模板切换，切换主题 -->
+        <el-submenu index="6">
+          <template slot="title">
+            <span>{{$t('tools.tools_modelpc')}}</span>
+          </template>
+        </el-submenu>
+
+        <!-- 7、PC页面模板切换，切换主题 -->
+        <el-submenu index="7">
+          <template slot="title">
+            <span>{{$t('tools.tools_modelapp')}}</span>
+          </template>
+        </el-submenu>
+
+        <!-- 8、系统设置，包括SEO title设置等 -->
+        <el-submenu index="8">
+          <template slot="title">
+            <span>{{$t('tools.tools_system')}}</span>
+          </template>
+        </el-submenu>
+
+        <!-- 9、统计表格 -->
+        <el-submenu index="9">
+          <template slot="title">
+            <span>{{$t('tools.tools_statistics')}}</span>
+          </template>
+        </el-submenu>
+
+        <!-- 10、财务管理设置 -->
+        <el-submenu index="10">
+          <template slot="title">
+            <span>{{$t('tools.tools_finance')}}</span>
+          </template>
+        </el-submenu>
+
+
       </el-menu>
     </div>
   </div>
