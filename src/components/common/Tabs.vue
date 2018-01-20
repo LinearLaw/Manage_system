@@ -7,9 +7,9 @@
       <el-menu default-active="2" class="el-menu-vertical-demo"
         @open="handleOpen"
         @close="handleClose"
-        background-color="#c7c7c7"
-        text-color="#555961"
-        active-text-color="#327ecc" :router="true">
+        background-color="#333"
+        text-color="#fff"
+        active-text-color="#409EFF" :router="true">
 
         <!-- 1、main info of shop -->
         <el-submenu index="1">
@@ -55,47 +55,36 @@
           </template>
         </el-submenu>
 
+
         <!-- 5、平台交易信息流水记录：收入、支出 -->
-        <el-submenu index="5">
-          <template slot="title">
-            <span>{{$t('tools.tools_transaction')}}</span>
-          </template>
-        </el-submenu>
+        <el-menu-item index="5" :route="{'name':'AfterProcess'}">
+          <span slot="title">{{$t('tools.tools_transaction')}}</span>
+        </el-menu-item>
 
         <!-- 6、web页面模板切换，切换主题 -->
-        <el-submenu index="6">
-          <template slot="title">
-            <span>{{$t('tools.tools_modelpc')}}</span>
-          </template>
-        </el-submenu>
+        <el-menu-item index="6" :route="{'name':'AfterProcess'}">
+          <span slot="title">{{$t('tools.tools_modelpc')}}</span>
+        </el-menu-item>
 
         <!-- 7、PC页面模板切换，切换主题 -->
-        <el-submenu index="7">
-          <template slot="title">
-            <span>{{$t('tools.tools_modelapp')}}</span>
-          </template>
-        </el-submenu>
+        <el-menu-item index="7" :route="{'name':'AfterProcess'}">
+          <span slot="title">{{$t('tools.tools_modelapp')}}</span>
+        </el-menu-item>
 
         <!-- 8、系统设置，包括SEO title设置等 -->
-        <el-submenu index="8">
-          <template slot="title">
-            <span>{{$t('tools.tools_system')}}</span>
-          </template>
-        </el-submenu>
+        <el-menu-item index="8" :route="{'name':'AfterProcess'}">
+          <span slot="title">{{$t('tools.tools_system')}}</span>
+        </el-menu-item>
 
         <!-- 9、统计表格 -->
-        <el-submenu index="9">
-          <template slot="title">
-            <span>{{$t('tools.tools_statistics')}}</span>
-          </template>
-        </el-submenu>
+        <el-menu-item index="9" :route="{'name':'AfterProcess'}">
+          <span slot="title">{{$t('tools.tools_statistics')}}</span>
+        </el-menu-item>
 
         <!-- 10、财务管理设置 -->
-        <el-submenu index="10">
-          <template slot="title">
-            <span>{{$t('tools.tools_finance')}}</span>
-          </template>
-        </el-submenu>
+        <el-menu-item index="10" :route="{'name':'AfterProcess'}">
+          <span slot="title">{{$t('tools.tools_finance')}}</span>
+        </el-menu-item>
 
 
       </el-menu>
@@ -124,7 +113,7 @@ export default {
 .tab{
   width:100%;
   height:100%;
-  background:#c7c7c7;
+  background:#333;
 }
 .tab_logo{
   width:100%;
