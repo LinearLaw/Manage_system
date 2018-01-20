@@ -113,11 +113,10 @@ export default {
 .tab{
   width:100%;
   height:100%;
-  background:#333;
 }
 .tab_logo{
   width:100%;
-  height:100px;
-  background:#888;
+  /*height:100px;*/
+  /*background:#888;*/
 }
 </style>
