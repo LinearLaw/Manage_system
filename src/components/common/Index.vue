@@ -83,11 +83,6 @@ export default {
       font-weight:900;
       color:#fff;
     }
-    /*.el-icon-star-on{ color:#E6A23C; }
-    .el-icon-date{    color:#67C23A; }
-    .el-icon-bell{    color:#409EFF; }
-    .el-icon-goods{   color:#F56C6C; }*/
-
   }
   .box_right_center{
     .count_title{
