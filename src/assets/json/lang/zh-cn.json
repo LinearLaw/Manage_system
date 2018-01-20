@@ -1,7 +1,7 @@
 {
   "login":{
-    "login_btn":"登录",
-    "signup_btn":"注册",
+    "login_btn":"登 录",
+    "signup_btn":"注 册",
     "comeback":"返回",
     "accountplaceholder":"输入账号",
     "pwdplaceholder":"请输入密码",

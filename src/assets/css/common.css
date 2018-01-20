@@ -43,7 +43,23 @@ input,button{
 .mg_b_10{margin-bottom:10px;}
 .mg_b_15{margin-bottom:15px;}
 .mg_b_20{margin-bottom:20px;}
+
+.pd_t_5{padding-top:5px;}
+.pd_t_10{padding-top:10px;}
+.pd_t_15{padding-top:15px;}
+.pd_t_20{padding-top:20px;}
+.pd_b_5 {padding-bottom:5px;}
+.pd_b_10{padding-bottom:10px;}
+.pd_b_15{padding-bottom:15px;}
+.pd_b_20{padding-bottom:20px;}
 #app{
     width:100%;
     height:100%;
 }
+.el-col{
+    min-height:1px;
+}
+.el-input_inner_error .el-input__inner{
+    border-color:#F56C6C;
+}
+

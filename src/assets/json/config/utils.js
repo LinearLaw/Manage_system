@@ -1,4 +1,3 @@
-<script type="text/javascript">
   /**
    * @description  utils , operate cookies
    */
@@ -17,8 +16,6 @@
       }
   };
 
-  export default
-  {
+  module.exports = {
     cookie,
   }
-</script>

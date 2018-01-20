@@ -10,7 +10,8 @@ import VueI18n from 'vue-i18n'
 import "./assets/css/common.css"
 import 'element-ui/lib/theme-chalk/index.css'
 //Load config file
-import _global from './assets/json/config/utils.vue'
+import _global from './assets/json/config/utils.js'
+import _config from './assets/json/config/config.js'
 
 Vue.use(ElementUI);
 Vue.use(Vuex);
@@ -23,6 +24,7 @@ const i18n = new VueI18n({locale: 'CN',messages: {CN: CN,EN: EN}})
 
 Vue.config.productionTip = false
 Vue.prototype.GLOBAL = _global
+Vue.prototype.CONFIG = _config
 
 /* eslint-disable no-new */
 new Vue({
