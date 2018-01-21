@@ -92,7 +92,6 @@ export default {
     .count_content{
       font-size:48px;
       letter-spacing: 3px;
-      /*font-weight:600;*/
     }
   }
   

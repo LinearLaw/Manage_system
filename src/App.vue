@@ -16,9 +16,7 @@ export default {
     Headers,Tabs
   },
   mounted(){
-    if(!this.GLOBAL.cookie.get("members_id")){
-      this.$router.push({"name":"Login"});
-    }
+    
   }
 }
 </script>

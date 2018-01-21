@@ -7,6 +7,8 @@ import Vuex from 'vuex'
 import ElementUI from 'element-ui'
 import VueI18n from 'vue-i18n'
 
+import "./assets/css/font-awesome-4.7.0/css/font-awesome.min.css"
+
 import "./assets/css/common.css"
 import 'element-ui/lib/theme-chalk/index.css'
 //Load config file
@@ -26,6 +28,18 @@ Vue.config.productionTip = false
 Vue.prototype.GLOBAL = _global
 Vue.prototype.CONFIG = _config
 
+router.beforeEach((to, from, next) => {
+  if(!to.meta.auth){
+        // 对路由进行验证
+        if(_global.cookie.get('members_id')) { // 已经登陆
+            next();     // 正常跳转到你设置好的页面
+        }else{
+            next({"name":"Login"});
+		    } 
+	} else{ 
+    next() 
+  } 
+})
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

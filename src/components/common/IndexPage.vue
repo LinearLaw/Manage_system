@@ -1,11 +1,12 @@
 <template>
   <div id="app">
-    <header id="headers">
-      <Headers></Headers>
-    </header>
     <section class="container" id="tabs">
       <Tabs></Tabs>
     </section>
+    <header id="headers">
+      <Headers></Headers>
+    </header>
+    
     <div class="view_place">
         <router-view/>
     </div>

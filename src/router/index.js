@@ -15,8 +15,7 @@ import AfterProcess from '@/components/aftermarket/AfterProcess.vue'
 import AfterLocation from '@/components/aftermarket/AfterLocation.vue'
 
 Vue.use(Router)
-
-export default new Router({
+const router = new Router({
   routes: [
     {
       path: '/',
@@ -36,6 +35,9 @@ export default new Router({
       ]
     },
     //2、Login page
-    {   path:'/login',  name:'Login',   component:Login   }
+    {   path:'/login',  name:'Login',   component:Login , meta:{auth:true} }
   ]
 })
+
+
+export default router
