@@ -1,5 +1,6 @@
 <template>
   <div class="indexpage">
+      <!--1、header-->
       <el-row :gutter="20">
         <el-col :span="6">
           <div class="index_box back_orange">
@@ -46,6 +47,33 @@
           </div>
         </el-col>
       </el-row>
+      <!--2、content-->
+      <el-row :gutter="20" class="mg_b_20">
+        <el-col :span="8">
+          <div class="chart_content">
+            
+          </div>
+        </el-col>
+        <el-col :span="16">
+          <div class="chart_content">
+            
+          </div>
+        </el-col>
+      </el-row>
+      <!--3、content 2-->
+      <el-row :gutter="20">
+        <el-col :span="12">
+          <div class="chart_content">
+            
+          </div>
+        </el-col>
+        <el-col :span="12">
+          <div class="chart_content">
+            
+          </div>
+        </el-col>
+      </el-row>
+      
   </div>
 </template>
 
@@ -72,8 +100,9 @@ export default {
 .index_box{
   padding:15px;
   padding-left:80px;
+  margin-bottom:20px;
   border-radius:5px;
-  /*border:4px solid #e2e2e1;*/
+  cursor:pointer;
   position:relative;
   .index_box_icon{
     font-size:50px;
@@ -94,6 +123,10 @@ export default {
       letter-spacing: 3px;
     }
   }
-  
+}
+.chart_content{
+  width:100%;
+  height:200px;
+  border:4px solid #e2e2e1;
 }
 </style>

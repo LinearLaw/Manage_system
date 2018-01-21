@@ -1,7 +1,11 @@
 <template>
   <div class="header container">
-    <span class="el-icon-menu box_top_center cs_point"></span>
+    <router-link :to="{'name':'Index'}">
+      <span class="fa fa-home box_top_center cs_point"></span>
+    </router-link>
+
     <i class="fa fa-power-off  box_top_center cs_point" aria-hidden="true"  @click="logoutPop = true"></i>
+    <!--退出登录弹框 start -->
     <el-dialog
       title="Notice"
       :visible.sync="logoutPop"
@@ -13,6 +17,8 @@
         <el-button type="primary" @click="logout">确 定</el-button>
       </span>
     </el-dialog>
+    <!--退出登录弹框 end -->
+    
   </div>
 </template>
 
@@ -47,7 +53,7 @@ export default {
     position:relative;
     padding:10px 20px;
 }
-.el-icon-menu{
+.fa-home{
     color:#fff;
     font-size:28px;
     &:hover{
