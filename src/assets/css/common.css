@@ -84,6 +84,11 @@ input,button{
     .back_green  { background-color:#67C23A; }
     .back_blue   { background-color:#409EFF; }
     .back_red    { background-color:#F56C6C; }
+
+    .back_orange_a { background-color:rgba(230,162,60,0.6); }
+    .back_green_a  { background-color:rgba(103,194,58,0.6); }
+    .back_blue_a   { background-color:rgba(64,158,255,0.6); }
+    .back_red_a    { background-color:rgba(245,108,108,0.6); }
 /******* 通用样式 end *******/
 
 /******* el样式专有 start*******/

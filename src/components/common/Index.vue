@@ -3,7 +3,7 @@
       <!--1、header-->
       <el-row :gutter="20">
         <el-col :span="6">
-          <div class="index_box back_orange">
+          <div class="index_box back_orange_a">
             <div class="box_top_center index_box_icon">
               <span class="el-icon-star-on"></span>
             </div>
@@ -14,7 +14,7 @@
           </div>
         </el-col>
         <el-col :span="6">
-          <div class="index_box back_green">
+          <div class="index_box back_green_a">
             <div class="box_top_center index_box_icon">
               <span class="el-icon-date"></span>
             </div>
@@ -25,7 +25,7 @@
           </div>
         </el-col>
         <el-col :span="6">
-          <div class="index_box back_blue">
+          <div class="index_box back_blue_a">
             <div class="box_top_center index_box_icon">
               <span class="el-icon-bell"></span>
             </div>
@@ -36,7 +36,7 @@
           </div>
         </el-col>
         <el-col :span="6">
-          <div class="index_box back_red">
+          <div class="index_box back_red_a">
             <div class="box_top_center index_box_icon">
               <span class="el-icon-goods"></span>
             </div>
@@ -48,19 +48,6 @@
         </el-col>
       </el-row>
       <!--2、content-->
-      <el-row :gutter="20" class="mg_b_20">
-        <el-col :span="8">
-          <div class="chart_content">
-            
-          </div>
-        </el-col>
-        <el-col :span="16">
-          <div class="chart_content">
-            
-          </div>
-        </el-col>
-      </el-row>
-      <!--3、content 2-->
       <el-row :gutter="10">
         <el-col :span="16">
           <div class="chart_content sell_count clearfix">
@@ -74,11 +61,11 @@
             </el-col>
             <el-col :md="12" :lg="6" class="sell_do_lines">
               <p>近30天出货量</p>
-              <p class="sell_count">145</p>
+              <p class="sell_count">{{sellCount.monthCount}}</p>
             </el-col>
             <el-col :md="12" :lg="6" class="sell_do_lines">
               <p>订单待处理</p>
-              <p class="sell_count">43672</p>
+              <p class="sell_count">{{sellCount.waitingCount}}</p>
             </el-col>
           </div>
         </el-col>
@@ -88,6 +75,20 @@
           </div>
         </el-col>
       </el-row>
+      <!--3、content 2-->
+      <el-row :gutter="20" class="mg_b_20">
+        <el-col :span="8">
+          <div class="chart_content">
+            
+          </div>
+        </el-col>
+        <el-col :span="16">
+          <div class="chart_content">
+            
+          </div>
+        </el-col>
+      </el-row>
+
       
   </div>
 </template>
@@ -100,8 +101,8 @@ export default {
       sellCount:{
         currentFlow:56756346,
         monthFlow:325757478,
-        monthCount:658,
-        waitingCount:345,
+        monthCount:658745,
+        waitingCount:345997,
       },
       count:{
         shopCount:5123,
@@ -137,30 +138,33 @@ export default {
   .box_right_center{
     .count_title{
       font-size:16px;
-      color:#333;
+      color:#666;
     }
     .count_content{
       font-size:48px;
       letter-spacing: 3px;
+      color:#333;
     }
   }
 }
 .chart_content{
   width:100%;
   min-height:100px;
-  border:4px solid #e2e2e1;
+  /*border:4px solid #e2e2e1;*/
   &.sell_count{
     /*height:100px;*/
+    background:#F7F7F8;
     padding:20px;
     text-align:center;
+    color:#666;
     .sell_do_lines{
-      border-left:1px solid #666;
+      border-left:1px solid #E4E4E4;
     }
     .sell_content{
       font-size:14px;
     }
     .sell_count{
-      color:#606266;
+      color:#666;
       font-size:24px;
       margin-top:10px;
     }
@@ -171,7 +175,7 @@ export default {
     .sell_do_lines{
       border:0;
       &:nth-child(2n){
-        border-left:1px solid #666;
+        border-left:1px solid #E4E4E4;
       }
       &:nth-child(n+3){
         margin-top:20px;
