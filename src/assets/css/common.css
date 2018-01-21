@@ -25,11 +25,8 @@ input,button{
     cursor:pointer;
 }
 .clearfix::before,
-.clerafix::after{
-    content:"";
-    display:table;
-    clear:both;
-}
+.clearfix::after {content: " ";visibility: hidden;display: block;clear: both;height: 0;font-size: 0}
+.clearfix {clear: both;}
 .fl{float:left;}
 .fr{float:right;}
 .txl{text-align:left;}
@@ -44,6 +41,8 @@ input,button{
 .mg_b_15{margin-bottom:15px;}
 .mg_b_20{margin-bottom:20px;}
 
+.pd_a_10{padding:10px;}
+.pd_a_15{padding:15px;}
 .pd_t_5{padding-top:5px;}
 .pd_t_10{padding-top:10px;}
 .pd_t_15{padding-top:15px;}

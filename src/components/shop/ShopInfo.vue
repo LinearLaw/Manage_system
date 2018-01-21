@@ -1,11 +1,20 @@
 <template>
-  <div>
+  <div class="pd_a_15">
     <el-breadcrumb separator-class="el-icon-arrow-right">
       <el-breadcrumb-item :to="{ name: 'Index' }">{{ $t('tabs.index')}}</el-breadcrumb-item>
       <el-breadcrumb-item>{{ $t('tabs.shopmain_info')}}</el-breadcrumb-item>
     </el-breadcrumb>
-    <div>
-
+    <div class="pd_a_15">
+      <div>
+        <el-row :gutter="20">
+          <el-col :span="4">
+            <span>店铺名称</span>
+          </el-col>
+          <el-col :span="20">
+            <span>阿里巴巴旗舰店</span>
+          </el-col>
+        </el-row>
+      </div>
     </div>
 
   </div>
