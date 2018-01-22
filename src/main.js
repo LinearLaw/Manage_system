@@ -6,6 +6,7 @@ import router from './router'
 import Vuex from 'vuex'
 import ElementUI from 'element-ui'
 import VueI18n from 'vue-i18n'
+import axios from "axios"
 
 import "./assets/css/font-awesome-4.7.0/css/font-awesome.min.css"
 
@@ -27,6 +28,7 @@ const i18n = new VueI18n({locale: 'CN',messages: {CN: CN,EN: EN}})
 Vue.config.productionTip = false
 Vue.prototype.GLOBAL = _global
 Vue.prototype.CONFIG = _config
+Vue.prototype.$http = axios
 
 router.beforeEach((to, from, next) => {
   if(!to.meta.auth){
@@ -35,10 +37,10 @@ router.beforeEach((to, from, next) => {
             next();     // 正常跳转到你设置好的页面
         }else{
             next({"name":"Login"});
-		    } 
-	} else{ 
-    next() 
-  } 
+		    }
+	} else{
+    next()
+  }
 })
 /* eslint-disable no-new */
 new Vue({
