@@ -11,7 +11,7 @@
         text-color="#fff"
         active-text-color="#409EFF" :router="true">
 
-        <!-- 1、main info of shop -->
+        <!-- 1、main info of shop , update shop info -->
         <el-submenu index="1">
           <template slot="title">
             <!-- <i class="el-icon-location"></i> -->
@@ -23,7 +23,7 @@
           </el-menu-item-group>
         </el-submenu>
 
-        <!-- 2、product info of shop -->
+        <!-- 2、product info of shop , add & edit & preview  -->
         <el-submenu index="2">
           <template slot="title">
             <!-- <i class="el-icon-location"></i> -->
@@ -31,8 +31,8 @@
           </template>
           <el-menu-item-group>
             <el-menu-item index="2-1" :route="{'name':'ProdList'}">{{ $t('tabs.productmain_list')}}</el-menu-item>
-            <el-menu-item index="2-1" :route="{'name':'ProdView'}">{{ $t('tabs.productmain_view')}}</el-menu-item>
             <el-menu-item index="2-2" :route="{'name':'ProdPub'}">{{ $t('tabs.productmain_publish')}}</el-menu-item>
+            <el-menu-item index="2-3" :route="{'name':'ProdView'}">{{ $t('tabs.productmain_view')}}</el-menu-item>
           </el-menu-item-group>
         </el-submenu>
 
