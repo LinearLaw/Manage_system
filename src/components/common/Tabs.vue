@@ -85,8 +85,6 @@
         <el-menu-item index="10" :route="{'name':'AfterProcess'}">
           <span slot="title">{{$t('tools.tools_finance')}}</span>
         </el-menu-item>
-
-
       </el-menu>
     </div>
   </div>
