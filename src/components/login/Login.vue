@@ -94,7 +94,8 @@ export default {
             message: '登录成功！',
             type: 'success'
           });
-          // this.$router.push({"name":"Index"});
+          console.log(this.$router.push);
+          this.$router.push({"name":"Index"});
           return;
         }
         if(res.data.status == 6){
