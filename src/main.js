@@ -25,9 +25,19 @@ import EN from './assets/json/lang/en-us.json'
 import CN from './assets/json/lang/zh-cn.json'
 const i18n = new VueI18n({locale: 'CN',messages: {CN: CN,EN: EN}})
 
-Vue.config.productionTip = false
-Vue.prototype.GLOBAL = _global
-Vue.prototype.CONFIG = _config
+Vue.config.productionTip = false;
+Vue.prototype.GLOBAL = _global;
+Vue.prototype.CONFIG = _config;
+
+// axios.defaults.withCredentials = true;
+axios.interceptors.request.use(function (config) {    // 这里的config包含每次请求的内容
+  
+    // config.defaults.withCredentials = false;
+    return config
+}, function (err) {
+    return Promise.reject(err);
+});
+
 Vue.prototype.$http = axios
 
 router.beforeEach((to, from, next) => {

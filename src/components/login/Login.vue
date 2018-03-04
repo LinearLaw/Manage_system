@@ -80,15 +80,49 @@ export default {
         return;
       }
       this.loading = true;
-      setTimeout(()=>{
+      let sendUrl = this.CONFIG.user_service.login;
+      let sendData = {
+        "username":this.loginInfo.account,
+        "pwd" : this.loginInfo.password
+      }
+      // let headers = {"Content-Type" : 'application/x-www-form-urlencoded;charset=utf-8'};
+      this.$http.post(sendUrl,sendData).then((res)=>{
         this.loading = false;
-        this.$message({
-          message: '登录成功！',
-          type: 'success'
-        });
-        this.GLOBAL.cookie.set("members_id",this.loginInfo.account);
-        this.$router.push({"name":"Index"});
-      },1000)
+        if(res.data.status == 1){
+          console.log(res);
+          this.$message({
+            message: '登录成功！',
+            type: 'success'
+          });
+          return;
+        }
+        if(res.data.status == 6){
+          this.$message({
+            message: '用户不存在',
+            type: 'warning'
+          });
+          return;
+        }
+        if(res.data.status == 7){
+          this.$message({
+            message: '用户名或密码错误',
+            type: 'warning'
+          });
+          return;
+        }
+      },(err)=>{
+        console.log(err);
+        this.loading = false;
+      })
+      // setTimeout(()=>{
+      //   this.loading = false;
+      //   this.$message({
+      //     message: '登录成功！',
+      //     type: 'success'
+      //   });
+      //   this.GLOBAL.cookie.set("members_id",this.loginInfo.account);
+      //   this.$router.push({"name":"Index"});
+      // },1000)
     }
   }
 }
