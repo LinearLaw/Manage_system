@@ -92,14 +92,42 @@ export default {
         return;
       }
       this.loading = true;
-      setTimeout(()=>{
+      let sendUrl = this.CONFIG.user_service.signup;
+      let sendData = {
+        username:this.signupInfo.account,
+        pwd : this.signupInfo.password
+      }
+
+      this.$http.post(sendUrl,sendData).then((res)=>{
         this.loading = false;
-        this.$message({
-          message: '注册成功！',
-          type: 'success'
-        });
-        this.$emit("closeSignup");
-      },1000)
+        if(res.data.status == 1){
+          console.log(res);
+          this.$message({
+            message: '注册成功！',
+            type: 'success'
+          });
+          this.$emit("closeSignup");
+          return;
+        }
+        if(res.data.status == 6){
+          this.$message({
+            message: '该用户已注册。',
+            type: 'warning'
+          });
+        }
+
+      },(err)=>{
+        console.log(err);
+      })
+
+      // setTimeout(()=>{
+      //   this.loading = false;
+      //   this.$message({
+      //     message: '注册成功！',
+      //     type: 'success'
+      //   });
+      //   this.$emit("closeSignup");
+      // },1000)
     }
   }
 }
