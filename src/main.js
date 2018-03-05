@@ -25,22 +25,39 @@ import EN from './assets/json/lang/en-us.json'
 import CN from './assets/json/lang/zh-cn.json'
 const i18n = new VueI18n({locale: 'CN',messages: {CN: CN,EN: EN}})
 
-Vue.config.productionTip = false
-Vue.prototype.GLOBAL = _global
-Vue.prototype.CONFIG = _config
+Vue.config.productionTip = false;
+Vue.prototype.GLOBAL = _global;
+Vue.prototype.CONFIG = _config;
+
+//axios的请求拦截器
+// axios.interceptors.request.use(function (config) {    // 这里的config包含每次请求的内容
+//     // config.defaults.withCredentials = false;
+//     return config
+// }, function (err) {
+//     return Promise.reject(err);
+// });
+//axios的响应拦截器，在这里定义路由守卫规则
+// axios.interceptors.response.use(function (config) {    
+//     // config.defaults.withCredentials = false;
+//     return config
+// }, function (err) {
+//     return Promise.reject(err);
+// });
+
 Vue.prototype.$http = axios
 
 router.beforeEach((to, from, next) => {
-  if(!to.meta.auth){
+  // if(!to.meta.auth){
         // 对路由进行验证
-        if(_global.cookie.get('members_id')) { // 已经登陆
-            next();     // 正常跳转到你设置好的页面
-        }else{
-            next({"name":"Login"});
-		    }
-	} else{
+        // console.log(_global.cookie.get('SID'));
+        // if(_global.cookie.get('SID')) { // 已经登陆
+            // next();     // 正常跳转到你设置好的页面
+        // }else{
+        //     next({"name":"Login"});
+		    // }
+	// } else{
     next()
-  }
+  // }
 })
 /* eslint-disable no-new */
 new Vue({
