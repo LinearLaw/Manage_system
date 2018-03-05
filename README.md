@@ -2,7 +2,7 @@
 
 > 后台管理系统
 
-> 配套的后台服务器程序：[https://github.com/LinearLaw/node_InitialSever](https://github.com/LinearLaw/node_InitialSever)
+> 配套的后台服务器程序：[https://github.com/LinearLaw/backend_server](https://github.com/LinearLaw/backend_server)
 
 ## Build Setup
 
