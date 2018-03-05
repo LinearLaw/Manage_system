@@ -5,6 +5,7 @@
       <el-breadcrumb-item>{{ $t('tabs.shopmain_info')}}</el-breadcrumb-item>
     </el-breadcrumb>
     <div class="pd_a_15">
+      <div class="txr"><router-link :to="{'name':'ShopEdit'}">编辑</router-link></div>
       <div>
         <el-row :gutter="20">
           <el-col :span="4">

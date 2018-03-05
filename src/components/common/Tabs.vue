@@ -19,7 +19,7 @@
           </template>
           <el-menu-item-group>
             <el-menu-item index="1-1" :route="{'name':'ShopInfo'}">{{ $t('tabs.shopmain_info') }}</el-menu-item>
-            <el-menu-item index="1-2" :route="{'name':'ShopRecord'}">{{ $t('tabs.shopmain_record') }}</el-menu-item>
+            <el-menu-item index="1-2" :route="{'name':'ShopEdit'}">{{ $t('tabs.shopmain_edit') }}</el-menu-item>
           </el-menu-item-group>
         </el-submenu>
 
