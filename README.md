@@ -1,7 +1,7 @@
 # manager-system
 
-> A Vue.js project
 > 后台管理系统
+
 > 配套的后台服务器程序：[https://github.com/LinearLaw/node_InitialSever](https://github.com/LinearLaw/node_InitialSever)
 
 ## Build Setup
