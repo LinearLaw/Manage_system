@@ -4,7 +4,7 @@
       <el-breadcrumb-item :to="{ name: 'Index' }">{{ $t('tabs.index')}}</el-breadcrumb-item>
       <el-breadcrumb-item>{{ $t('tabs.productmain_publish')}}</el-breadcrumb-item>
     </el-breadcrumb>
-    <div class="product_publish">
+    <div class="product_publish pd_t_15">
       <el-form ref="form" :model="form" label-width="80px">
         <el-form-item label="活动名称">
           <el-input v-model="form.name"></el-input>

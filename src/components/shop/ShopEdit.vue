@@ -1,5 +1,5 @@
 <template>
-  <div class="pd_a_15" id="shop_edit">
+  <div id="shop_edit">
     <el-breadcrumb separator-class="el-icon-arrow-right">
       <el-breadcrumb-item :to="{ name: 'Index' }">{{ $t('tabs.index')}}</el-breadcrumb-item>
       <el-breadcrumb-item>{{ $t('tabs.shopmain_edit')}}</el-breadcrumb-item>

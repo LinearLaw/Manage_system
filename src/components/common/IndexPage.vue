@@ -8,7 +8,7 @@
     </header>
     
     <div class="view_place">
-        <router-view/>
+        <router-view class="pd_a_15"/>
     </div>
   </div>
 </template>
