@@ -27,13 +27,13 @@
             <el-option label="企业店铺" value="1"></el-option>
           </el-select>
         </el-form-item>
-        
+
         <el-form-item label="店铺详情">
           <el-input type="textarea" v-model="form.shopDetail"></el-input>
         </el-form-item>
         <el-form-item class="agree_text">
           <el-checkbox v-model="form.agreement"></el-checkbox>
-          <span>我声明，此页面内容由本店铺自行填写和发布，内容真实有效，如有相关法律法规，</br>平台协议及平台规则之规定冲突的，以法律法规、平台协议及平台规则规定为准            
+          <span>我声明，此页面内容由本店铺自行填写和发布，内容真实有效，如有相关法律法规，</br>平台协议及平台规则之规定冲突的，以法律法规、平台协议及平台规则规定为准
           </span>
         </el-form-item>
 
@@ -83,7 +83,7 @@ export default {
      * @desc 保存数据
      */
     onSubmit() {
-      let sendUrl = this.CONFIG.user_service.login;
+      let sendUrl = this.CONFIG.shop_service.editshop;
       let sendData = this.form
       this.$http.post(sendUrl,sendData).then((res)=>{
         this.loading = false;
