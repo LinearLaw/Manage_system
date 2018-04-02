@@ -14,7 +14,7 @@
       </div>
       <div class="mg_b_20 txc">
           <el-col :span="24" class="mg_b_10">
-            <el-button class="login_btn txc" type="success" long 
+            <el-button class="login_btn txc" type="success" long
                  @click="login">{{ $t("login.login_btn") }}</el-button>
           </el-col>
           <span class="show_signup" @click="showPop.switchSignup=true;"
@@ -105,13 +105,12 @@ export default {
           });
           return;
         }
-        if(res.data.status == 7){
-          this.$message({
-            message: '用户名或密码错误',
-            type: 'warning'
-          });
-          return;
-        }
+        //用户名或密码非法
+        this.$message({
+          message: '用户名或密码错误',
+          type: 'warning'
+        });
+        return;
       },(err)=>{
         console.log(err);
         this.loading = false;
