@@ -94,7 +94,6 @@ export default {
             message: '登录成功！',
             type: 'success'
           });
-          console.log(this.$router.push);
           this.$router.push({"name":"Index"});
           return;
         }
@@ -114,16 +113,11 @@ export default {
       },(err)=>{
         console.log(err);
         this.loading = false;
+        this.$message({
+          message: 'Server Error!请稍后再试！',
+          type: 'warning'
+        });
       })
-      // setTimeout(()=>{
-      //   this.loading = false;
-      //   this.$message({
-      //     message: '登录成功！',
-      //     type: 'success'
-      //   });
-      //   this.GLOBAL.cookie.set("members_id",this.loginInfo.account);
-      //   this.$router.push({"name":"Index"});
-      // },1000)
     }
   }
 }
