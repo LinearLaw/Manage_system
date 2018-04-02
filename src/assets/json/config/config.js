@@ -7,8 +7,8 @@ const user_service = {
 }
 const shop_service = {
   editshop :serverProxy + "/doeditshop",
-  addshop : serverProxy + "/doaddshop"
-
+  addshop : serverProxy + "/doaddshop",
+  getshop : serverProxy + "/dogetshop"
 }
 
 export default {

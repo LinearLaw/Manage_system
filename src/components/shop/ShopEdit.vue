@@ -61,6 +61,9 @@ export default {
         }
     }
   },
+  mounted(){
+    this.getShopInfo();
+  },
   methods: {
     /**
      * @desc 上传图片
@@ -78,6 +81,51 @@ export default {
         this.$message.error('上传头像图片大小不能超过 2MB!');
       }
       return isJPG && isLt2M;
+    },
+    getShopInfo(){
+      let sendUrl = this.CONFIG.shop_service.getshop;
+      this.loading = true;
+      this.$http.get(sendUrl).then((res)=>{
+        this.loading = false;
+        console.log(res.data);
+
+        if(res.data.status == -1){
+          this.$message({
+            message: '用户未登录',
+            type: 'warning'
+          });
+          this.$router.push({"name":"Login"})
+          return;
+        }
+        if(res.data.status == 1){
+          console.log(res.data);
+          return;
+        }
+        if(res.data.status == 2){
+          this.$message({
+            message: '错误',
+            type: 'warning'
+          });
+          return;
+        }
+        if(res.data.status == 3){
+          this.$message({
+            message: '错误',
+            type: 'warning'
+          });
+          return;
+        }
+        if(res.data.status == 4){
+          this.$message({
+            message: '错误',
+            type: 'warning'
+          });
+          return;
+        }
+      },(err)=>{
+        console.log(err);
+
+      })
     },
     /**
      * @desc 保存数据
