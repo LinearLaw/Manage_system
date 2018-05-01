@@ -12,6 +12,7 @@ import "./assets/css/font-awesome-4.7.0/css/font-awesome.min.css"
 
 import "./assets/css/common.css"
 import 'element-ui/lib/theme-chalk/index.css'
+
 //Load config file
 import _global from './assets/json/config/utils.js'
 import _config from './assets/json/config/config.js'
