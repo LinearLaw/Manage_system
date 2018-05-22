@@ -16,7 +16,10 @@ export default {
     Headers,Tabs
   },
   mounted(){
-    
+    // if(){
+      // $.each([42,5,25,2,52,523,523,2],function(){})
+    // }
+    console.log($);
   }
 }
 </script>
