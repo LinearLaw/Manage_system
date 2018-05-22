@@ -2,7 +2,7 @@
   <div class="indexpage">
       <!--1、header-->
       <el-row :gutter="20">
-        <el-col :span="6">
+        <el-col :xs="12" :md="12" :span="6">
           <div class="index_box back_orange_a">
             <div class="box_top_center index_box_icon">
               <span class="el-icon-star-on"></span>
@@ -13,7 +13,7 @@
             </div>
           </div>
         </el-col>
-        <el-col :span="6">
+        <el-col :xs="12" :md="12" :span="6">
           <div class="index_box back_green_a">
             <div class="box_top_center index_box_icon">
               <span class="el-icon-date"></span>
@@ -24,7 +24,7 @@
             </div>
           </div>
         </el-col>
-        <el-col :span="6">
+        <el-col :xs="12" :md="12" :span="6">
           <div class="index_box back_blue_a">
             <div class="box_top_center index_box_icon">
               <span class="el-icon-bell"></span>
@@ -35,7 +35,7 @@
             </div>
           </div>
         </el-col>
-        <el-col :span="6">
+        <el-col :xs="12" :md="12" :span="6">
           <div class="index_box back_red_a">
             <div class="box_top_center index_box_icon">
               <span class="el-icon-goods"></span>
@@ -51,19 +51,19 @@
       <el-row :gutter="10">
         <el-col :span="16">
           <div class="chart_content sell_count clearfix">
-            <el-col :md="12" :lg="6">
+            <el-col :xs="24" :md="12" :lg="6" >
               <p>今日成交额</p>
               <p class="fa fa-rmb sell_count">{{sellCount.currentFlow.toLocaleString()}}</p>
             </el-col>
-            <el-col :md="12" :lg="6" class="sell_do_lines">
+            <el-col :xs="24" :md="12" :lg="6" class="sell_do_lines">
               <p>近30天成交额</p>
               <p class="fa fa-rmb sell_count">{{sellCount.monthFlow.toLocaleString()}}</p>
             </el-col>
-            <el-col :md="12" :lg="6" class="sell_do_lines">
+            <el-col :xs="24" :md="12" :lg="6" class="sell_do_lines">
               <p>近30天出货量</p>
               <p class="sell_count">{{sellCount.monthCount}}</p>
             </el-col>
-            <el-col :md="12" :lg="6" class="sell_do_lines">
+            <el-col :xs="24" :md="12" :lg="6" class="sell_do_lines">
               <p>订单待处理</p>
               <p class="sell_count">{{sellCount.waitingCount}}</p>
             </el-col>
@@ -71,7 +71,7 @@
         </el-col>
         <el-col :span="8">
           <div class="chart_content sell_count">
-            
+
           </div>
         </el-col>
       </el-row>
@@ -79,17 +79,17 @@
       <el-row :gutter="20" class="mg_b_20">
         <el-col :span="8">
           <div class="chart_content">
-            
+
           </div>
         </el-col>
         <el-col :span="16">
           <div class="chart_content">
-            
+
           </div>
         </el-col>
       </el-row>
 
-      
+
   </div>
 </template>
 

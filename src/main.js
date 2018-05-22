@@ -12,6 +12,8 @@ import "./assets/css/font-awesome-4.7.0/css/font-awesome.min.css"
 
 import "./assets/css/common.css"
 import 'element-ui/lib/theme-chalk/index.css'
+import "./assets/css/test.less"
+
 //Load config file
 import _global from './assets/json/config/utils.js'
 import _config from './assets/json/config/config.js'
@@ -37,7 +39,7 @@ Vue.prototype.CONFIG = _config;
 //     return Promise.reject(err);
 // });
 //axios的响应拦截器，在这里定义路由守卫规则
-// axios.interceptors.response.use(function (config) {    
+// axios.interceptors.response.use(function (config) {
 //     // config.defaults.withCredentials = false;
 //     return config
 // }, function (err) {
