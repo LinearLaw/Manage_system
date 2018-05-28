@@ -7,7 +7,7 @@
 
 
     <vue-event-calendar :events="demoEvents"></vue-event-calendar>
-    
+    、
   </div>
 </template>
 

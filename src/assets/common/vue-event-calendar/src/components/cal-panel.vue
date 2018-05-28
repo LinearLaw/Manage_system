@@ -129,7 +129,7 @@ export default {
     },
     preMonth () {
       this.$EventCalendar.preMonth()
-      this.$emit('month-changed', this.curYearMonth)
+      this.$emit('month-changed', this.curYearMonth);
     },
     // 改变年份
     changeYear(year){
