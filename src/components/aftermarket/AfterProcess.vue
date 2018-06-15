@@ -62,10 +62,11 @@ export default {
         id: 3,
         label: '一级 3',
         children: [{ id: 7, label: '二级 3-1' }, { id: 8, label: '二级 3-2' }]
-      }]
+      }];
+
     setTimeout(function(){
       _this.$set(_this.$data,'data5',arr);
-    },1000)
+    },1000);
   },
   methods: {
       append(data) {

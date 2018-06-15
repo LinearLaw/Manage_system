@@ -18,14 +18,14 @@
       </span>
     </el-dialog>
     <!--退出登录弹框 end -->
-    
+
   </div>
 </template>
 
 <script>
 export default {
   name: 'headers',
-  data () {
+  data () { 
     return {
       logoutPop:false
     }
@@ -57,7 +57,7 @@ export default {
     color:#fff;
     font-size:28px;
     &:hover{
-      color:#409EFF;  
+      color:#409EFF;
     }
 }
 .fa-power-off{
@@ -65,7 +65,7 @@ export default {
     font-size:28px;
     right:20px;
     &:hover{
-      color:#409EFF;  
+      color:#409EFF;
     }
 }
 </style>
