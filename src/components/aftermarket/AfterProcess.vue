@@ -33,15 +33,32 @@
       </el-tree>
     </div>
 
+    <vue-event-calendar :events="demoEvents"></vue-event-calendar>
   </div>
 </template>
 
 <script>
+import Vue from 'vue';
+import '../../assets/common/vue-event-calendar/dist/style.css' //^1.1.10, CSS has been extracted as one file, so you can easily update it.
+import vueEventCalendar from '../../assets/common/vue-event-calendar/src/index.js'
+Vue.use(vueEventCalendar, {locale: 'en'})
 export default {
   name: 'AfterProcess',
   data () {
     return {
+<<<<<<< HEAD
       data5:[]
+=======
+      demoEvents: [{
+        date: '2016/11/12', // Required
+        title: 'Foo' // Required
+      }, {
+        date: '2016/12/15',
+        title: 'Bar',
+        desc: 'description',
+        customClass: 'disabled highlight' // Custom classes to an calendar cell
+      }]
+>>>>>>> 175d6d3cf575a9e6031265a041a61026541c102a
     }
   },
   mounted:function(){
