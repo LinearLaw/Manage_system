@@ -22,7 +22,22 @@ export default {
   name: 'AfterLocation',
   data () {
     return {
-      options: [{
+      options: [],
+        keyOfOption:{
+          id1:0,
+          id2:1,
+          id3:2,
+          id4:3,
+          id5:4
+        },
+        value5: [],
+        value11: []
+    }
+  },
+  mounted(){
+    let _this = this;
+    setTimeout(()=>{
+      _this.options = [{
           value: 'id1',
           label: '黄金糕',
         }, {
@@ -37,17 +52,10 @@ export default {
         }, {
           value: 'id5',
           label: '北京烤鸭'
-        }],
-        keyOfOption:{
-          id1:0,
-          id2:1,
-          id3:2,
-          id4:3,
-          id5:4
-        },
-        value5: [],
-        value11: []
-    }
+        }]
+      this.value5 = ["id1","id3"];
+    },500)
+
   },
   methods:{
     getNumber(){
