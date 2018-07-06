@@ -33,15 +33,15 @@
       </el-tree>
     </div>
 
-    <vue-event-calendar :events="demoEvents"></vue-event-calendar>
+    <!-- <vue-event-calendar :events="demoEvents"></vue-event-calendar> -->
   </div>
 </template>
 
 <script>
 import Vue from 'vue';
-import '../../assets/common/vue-event-calendar/dist/style.css' //^1.1.10, CSS has been extracted as one file, so you can easily update it.
-import vueEventCalendar from '../../assets/common/vue-event-calendar/src/index.js'
-Vue.use(vueEventCalendar, {locale: 'en'})
+// import '../../assets/common/vue-event-calendar/dist/style.css' //^1.1.10, CSS has been extracted as one file, so you can easily update it.
+// import vueEventCalendar from '../../assets/common/vue-event-calendar/src/index.js'
+// Vue.use(vueEventCalendar, {locale: 'en'})
 export default {
   name: 'AfterProcess',
   data () {
