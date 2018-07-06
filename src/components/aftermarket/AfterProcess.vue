@@ -46,9 +46,6 @@ export default {
   name: 'AfterProcess',
   data () {
     return {
-<<<<<<< HEAD
-      data5:[]
-=======
       demoEvents: [{
         date: '2016/11/12', // Required
         title: 'Foo' // Required
@@ -58,7 +55,6 @@ export default {
         desc: 'description',
         customClass: 'disabled highlight' // Custom classes to an calendar cell
       }]
->>>>>>> 175d6d3cf575a9e6031265a041a61026541c102a
     }
   },
   mounted:function(){
